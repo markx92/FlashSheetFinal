@@ -13,7 +13,7 @@
         <!--div class="container"-->
         <ol>
             {% for sandwich in sandwiches %}
-                <li>{{ sandwich.name }} | {{ sandwich.price }} | {{ sandwich.filling }} | <a href="#" class="link-primary">{{ sandwich.photo }}</a></li>
+                <li>{{ sandwich.name }} | {{ sandwich.price }} | {{ sandwich.filling }} | <a href="{{ sandwich.photo }}"" class="link-primary">Click for a Pic!</a></li>
             {% endfor %}
         </ol>
         <!--/div-->
