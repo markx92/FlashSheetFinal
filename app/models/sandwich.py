@@ -1,7 +1,7 @@
 
 from app.db import BaseModel
 
-class sandwich(BaseModel):
+class Sandwich(BaseModel):
 
     SHEET_NAME = "sandwiches"
 
@@ -17,11 +17,11 @@ class sandwich(BaseModel):
 
 if __name__ == "__main__":
 
-    sandwiches = sandwich.all()
+    sandwiches = Sandwich.all()
     print("FOUND", len(sandwiches), "SANDWICHES")
     if any(sandwiches):
         for sandwich in sandwiches:
             print(sandwich.name, sandwich.price, sandwich.filling, sandwich.photo)
     else:
-        sandwich.seed()
+        Sandwich.seed()
 
